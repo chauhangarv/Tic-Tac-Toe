@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Ubuntu&display=swap');
+*{
+        margin:0;
+        padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 52px;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    padding: 0 12px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.gamecontainer{
+display: flex;
+margin: auto;
+justify-content: center;
+margin-top: 50px;
+}
+
+.img{
+    background-image: url(./pic/farm-1.jpg);
+      height: 37.2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+display: grid;
+grid-template-rows: repeat(3, 10vw);
+grid-template-columns: repeat(3, 10vw);
+font-family: 'Bricolage Grotesque', sans-serif;
+position: relative;
+}
+
+.box{
+    border: 1.5px solid black;
+    font-size: 6vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+background-color: beige;
+}
+
+.info{
+    font-size: 20px;
+  margin-top: 10px;
+
+}
+
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.gameInfo h1{
+    font-size: 2.2rem;
+}
+
+.imgbox img{
+   width: 0;
+   transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+margin: 10px 23px;
+padding: 6px 30px;
+background: beige;
+border-radius: 4px;
+cursor: pointer;
+font-family: 'Bricolage Grotesque', sans-serif;
+font-size: 15px;
+font-weight: bolder;
+border: 1px solid black;
+}
+
+.line{
+    background-color: black;
+    height: 2.3px;
+    width: 0vw;
+    position: absolute;
+    transition: width 1s ease-in-out;
+
+}
+
+@media screen and (max-width: 800px)
+{
+    .gamecontainer{
+       flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.3rem;
+    }
+    .container{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
